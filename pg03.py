@@ -1,5 +1,3 @@
-# import math
-
 from typing import Dict
 
 import pygame
@@ -42,7 +40,7 @@ class PGTutorial03(object):
 
         # this causes the key event to be fired at stated
         # intervals if user holds key down
-        pygame.key.set_repeat(self.max_fps)            
+        pygame.key.set_repeat(1000 / self.max_fps)            
 
         self.__event_loop()
 
