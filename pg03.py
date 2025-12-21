@@ -40,7 +40,7 @@ class PGTutorial03(object):
 
         # this causes the key event to be fired at stated
         # intervals if user holds key down
-        pygame.key.set_repeat(1000 / self.max_fps)            
+        pygame.key.set_repeat(round(1000 / self.max_fps))          
 
         self.__event_loop()
 
@@ -53,7 +53,7 @@ class PGTutorial03(object):
         '''
 
         # convert_alpha is needed for graphics with transparency
-        graphics = {"background": pygame.Surface.convert(pygame.image.load('background2.jpg')),
+        graphics = {"background": pygame.Surface.convert_alpha(pygame.image.load('background2.jpg')),
                     "spaceship": pygame.Surface.convert_alpha(pygame.image.load('spaceshipsmall.png')),
                     "flyingsaucer": pygame.Surface.convert_alpha(pygame.image.load('flyingsaucersmall.png'))}
 
